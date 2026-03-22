@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto JavaScript</title>
+
+  <style>
+    /* Visual básico da página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Caixa central */
+    main {
+      max-width: 700px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    /* Título */
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Texto */
+    p {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /* Número do contador */
+    .contador {
+      font-size: 40px;
+      margin: 20px 0;
+      color: #00acc1;
+    }
+
+    /* Botões de ação */
+    button {
+      margin: 8px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #00bcd4;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* Link para voltar */
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background: #00bcd4;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Projeto JavaScript</h1>
+    <p>Este projeto demonstra uma interação simples com JavaScript.</p>
+
+    <!-- Aqui o número do contador aparece na tela -->
+    <div class="contador" id="contador">0</div>
+
+    <!-- Botões que mexem no valor do contador -->
+    <button onclick="aumentar()">Aumentar</button>
+    <button onclick="diminuir()">Diminuir</button>
+    <button onclick="resetar()">Resetar</button>
+    <br><br>
+
+    <a href="projeto-html">Voltar ao portfólio</a>
+  </main>
+
+  <script>
+    // Valor inicial do contador
+    let valor = 0;
+
+    // Atualiza o número mostrado na tela
+    function atualizarTela() {
+      document.getElementById("contador").textContent = valor;
+    }
+
+    // Soma 1 no contador
+    function aumentar() {
+      valor++;
+      atualizarTela();
+    }
+
+    // Diminui 1 no contador
+    function diminuir() {
+      valor--;
+      atualizarTela();
+    }
+
+    // Volta o contador para zero
+    function resetar() {
+      valor = 0;
+      atualizarTela();
+    }
+  </script>
+</body>
+</html>

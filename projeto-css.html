@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto CSS</title>
+
+  <style>
+    /* Reset básico para não dar diferença no layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fundo e fonte da página */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f4f4f4);
+      color: #222;
+      padding: 40px;
+    }
+
+    /* Área central do conteúdo */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Título principal */
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* Lista de cards */
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Estilo de cada card */
+    .card {
+      background: white;
+      width: 280px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    /* Subtítulo do card */
+    .card h2 {
+      margin-bottom: 15px;
+      color: #00acc1;
+    }
+
+    /* Texto do card */
+    .card p {
+      margin-bottom: 20px;
+    }
+
+    /* Botão simples */
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #00bcd4;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+    }
+
+    /* Link para voltar */
+    .voltar {
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
+      text-decoration: none;
+      background: #222;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Projeto CSS</h1>
+
+    <!-- Esses cards servem para mostrar um exemplo visual -->
+    <div class="cards">
+      <div class="card">
+        <h2>Layout</h2>
+        <p>Exemplo de estilização com espaçamento, cores, sombras e bordas arredondadas.</p>
+        <a href="#" class="btn">Saiba mais</a>
+      </div>
+
+      <div class="card">
+        <h2>Responsividade</h2>
+        <p>Estrutura organizada com blocos visuais para praticar posicionamento e design.</p>
+        <a href="#" class="btn">Saiba mais</a>
+      </div>
+
+      <div class="card">
+        <h2>Visual</h2>
+        <p>Projeto desenvolvido para demonstrar conceitos básicos de CSS3 em páginas web.</p>
+        <a href="#" class="btn">Saiba mais</a>
+      </div>
+    </div>
+
+    <!-- Volta para a página do portfólio -->
+    <a href="projeto-html" class="voltar">Voltar ao portfólio</a>
+  </div>
+</body>
+</html>
