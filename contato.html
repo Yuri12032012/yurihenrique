@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+
+  <!-- Carrega o tema salvo para evitar mudança brusca na tela -->
+  <script>
+    (function () {
+      const temaSalvo = localStorage.getItem("tema");
+      if (temaSalvo === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menu principal -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <button id="temaBtn" aria-label="Alternar tema">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Área do formulário de contato -->
+  <section class="contato-container">
+    <h1>Contato</h1>
+
+    <!-- Formulário simples para simular envio de mensagem -->
+    <form id="formContato" class="form-box">
+      <input type="text" id="nome" placeholder="Seu nome">
+      <input type="email" id="email" placeholder="Seu email">
+      <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
+      <button type="submit">Enviar mensagem</button>
+    </form>
+  </section>
+
+  <!-- Modal que aparece quando a mensagem é enviada -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Mensagem enviada!</h2>
+      <p>Seu contato foi enviado com sucesso.</p>
+      <button id="fecharModal">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

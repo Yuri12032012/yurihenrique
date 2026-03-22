@@ -1,0 +1,352 @@
+/* =========================
+   Reset básico
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Cores do tema claro
+   ========================= */
+:root {
+  --bg: #f4f4f4;
+  --text: #222;
+  --card: #ffffff;
+  --menu: #222;
+  --accent: #00bcd4;
+  --border: #ccc;
+}
+
+/* =========================
+   Cores do tema escuro
+   ========================= */
+html.dark {
+  --bg: #121212;
+  --text: #eeeeee;
+  --card: #1e1e1e;
+  --menu: #1a1a1a;
+  --accent: #4dd0e1;
+  --border: #444;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cabeçalho fixo */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--menu);
+  z-index: 1000;
+}
+
+/* Área do menu */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Lista do menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+/* Espaço entre os itens do menu */
+nav ul li {
+  margin: 0 20px;
+}
+
+/* Links do menu */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Cor quando passa o mouse */
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* Botão do tema */
+#temaBtn {
+  margin-left: 20px;
+  width: 60px;
+  height: 30px;
+  background-color: #444;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  font-size: 0;
+}
+
+/* Bolinha do botão */
+#temaBtn::before {
+  content: "☾";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Cor do botão no modo escuro */
+.dark #temaBtn {
+  background-color: var(--accent);
+}
+
+/* Movimento da bolinha no modo escuro */
+.dark #temaBtn::before {
+  transform: translateX(30px);
+  content: "☼";
+}
+
+/* Seções principais do site */
+section {
+  max-width: 900px;
+  margin: 120px auto;
+  padding: 30px;
+  background-color: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Espaço do título */
+.animar h1,
+.contato-container h1 {
+  margin-bottom: 20px;
+}
+
+/* Altura das linhas para leitura melhor */
+.animar p,
+.animar li {
+  line-height: 1.7;
+}
+
+/* Área dos cards do portfólio */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Card individual */
+.card {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Título do card */
+.card h2 {
+  margin-bottom: 10px;
+}
+
+/* Texto do card */
+.card p {
+  line-height: 1.6;
+}
+
+/* Botão padrão */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.3s;
+}
+
+/* Efeito simples no botão */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Caixa da página de contato */
+.contato-container {
+  max-width: 900px;
+  margin: 120px auto;
+  padding: 30px;
+  background-color: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Caixa do formulário */
+.form-box {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* Campos do formulário */
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background-color: white;
+  color: #222;
+  font-size: 16px;
+}
+
+/* Ajuste visual dos campos no modo escuro */
+.dark .form-box input,
+.dark .form-box textarea {
+  background-color: #2a2a2a;
+  color: #eeeeee;
+}
+
+/* Área da mensagem */
+.form-box textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Botão do formulário */
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+/* Hover do botão do formulário */
+.form-box button:hover {
+  opacity: 0.9;
+}
+
+/* Fundo do modal */
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+/* Modal visível */
+.modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Caixa interna do modal */
+.modal-content {
+  background-color: var(--card);
+  color: var(--text);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Título do modal */
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+/* Texto do modal */
+.modal-content p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Botão do modal */
+.modal-content button {
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hover do botão do modal */
+.modal-content button:hover {
+  opacity: 0.9;
+}
+
+/* Ajustes para celular */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 8px 10px;
+  }
+
+  #temaBtn {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  section,
+  .contato-container {
+    margin: 150px 15px 30px;
+    padding: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    min-width: 100%;
+  }
+}

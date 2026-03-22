@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
+
+  <!-- Aqui eu mantenho o tema escolhido pelo usuário -->
+  <script>
+    (function () {
+      const temaSalvo = localStorage.getItem("tema");
+      if (temaSalvo === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Mesmo menu em todas as páginas principais -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <button id="temaBtn" aria-label="Alternar tema">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Área onde eu mostro alguns projetos -->
+  <section class="animar">
+    <h1>Portfólio</h1>
+    <br>
+
+    <p>Projetos básicos que desenvolvi durante os estudos:</p>
+    <br><br>
+
+    <div class="cards">
+      <!-- Card do projeto em HTML -->
+      <div class="card">
+        <h2>Projeto HTML</h2>
+        <p>Página simples criada com HTML5 utilizando títulos, parágrafos, listas e estrutura semântica.</p>
+        <a href="projeto-html.html" class="btn">Ver projeto</a>
+      </div>
+
+      <!-- Card do projeto em CSS -->
+      <div class="card">
+        <h2>Projeto CSS</h2>
+        <p>Layout estilizado com CSS3, utilizando cores, espaçamento, cartões e organização visual.</p>
+        <a href="projeto-css.html" class="btn">Ver projeto</a>
+      </div>
+
+      <!-- Card do projeto em JavaScript -->
+      <div class="card">
+        <h2>Projeto JavaScript</h2>
+        <p>Exemplo de interação com JavaScript utilizando botões e atualização dinâmica de conteúdo.</p>
+        <a href="projeto-js.html" class="btn">Ver projeto</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

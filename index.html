@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mim</title>
+
+  <!-- Aqui eu deixei o tema salvo carregar antes da página aparecer -->
+  <script>
+    (function () {
+      const temaSalvo = localStorage.getItem("tema");
+      if (temaSalvo === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
+
+  <!-- Arquivo principal de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Menu fixo com os links principais do site -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+
+      <!-- Botão que troca entre tema claro e escuro -->
+      <button id="temaBtn" aria-label="Alternar tema">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Parte principal da página sobre mim -->
+  <section class="animar">
+    <h1>Sobre mim</h1>
+
+    <!-- Aqui eu coloquei uma apresentação simples -->
+    <p>Meu nome é Yuri Henrique Gonçalves Veloso e estou cursando Engenharia de Software.</p>
+    <br>
+
+    <p>Sou apaixonado por tecnologia, programação e pelo desenvolvimento de soluções inovadoras que facilitem o dia a dia das pessoas.</p>
+    <br>
+
+    <p>Estou sempre em busca de aprender novas ferramentas e aprimorar minhas habilidades na área.</p>
+    <br>
+
+    <p>Além do meu interesse por tecnologia, também gosto de tocar piano, atividade que considero importante para desenvolver concentração, disciplina e criatividade.</p>
+    <br>
+
+    <p>Busco crescer profissionalmente na área de desenvolvimento de software, adquirindo experiência e criando projetos que contribuam para a solução de problemas reais.</p>
+  </section>
+
+  <!-- JavaScript geral do site -->
+  <script src="script.js"></script>
+</body>
+</html>
